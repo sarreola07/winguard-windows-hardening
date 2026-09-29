@@ -1,0 +1,15 @@
+# Reports can contain system details. Only the curated sample-report.txt is committed.
+*_reports/
+
+# The course starter file does not belong in the repo.
+Harden-Windows_STARTER.ps1
+
+# Lab setup notes are not part of the tool.
+LAB2_SETUP_GUIDE.md
+
+# Windows cruft
+Thumbs.db
+desktop.ini
+
+# Personal lab notes, not part of the tool.
+RESUME.md
