@@ -1,0 +1,59 @@
+﻿WinGuard Security Report
+Generated: 09/29/2026 17:50:06
+Computer:  DESKTOP-557MV75
+
+===== BEFORE =====
+
+-- Microsoft Security Baseline  (8 of 10 passing) --
+  [PASS] SMBv1 disabled  ->  EnableSMB1Protocol=False
+  [PASS] SMB server signing required  ->  RequireSecuritySignature=True
+  [FAIL] NTLM hardened (LmCompatibilityLevel = 5)  ->  LmCompatibilityLevel=not set (Windows default 3)
+  [PASS] User Account Control (UAC) enabled  ->  EnableLUA=1
+  [FAIL] Minimum password length 14 or more  ->  Minimum password length=0
+  [PASS] Account lockout threshold 1 to 10  ->  Lockout threshold=10
+  [PASS] Firewall enabled on all profiles  ->  Domain=True, Private=True, Public=True
+  [PASS] Defender real-time protection on  ->  DisableRealtimeMonitoring=False
+  [PASS] Guest account disabled  ->  Guest Enabled=False
+  [PASS] RDP requires Network Level Authentication  ->  UserAuthentication=1
+
+-- Advanced hardening  (0 of 5 passing) --
+  [FAIL] Defender PUA protection on  ->  PUAProtection=2
+  [FAIL] ASR: block Office child processes  ->  ASR D4F940AB-401B-4EFC-AADC-AD5F3C50688A rule not configured
+  [FAIL] PowerShell script block logging on  ->  EnableScriptBlockLogging=not set
+  [FAIL] LSA protection (RunAsPPL) on  ->  RunAsPPL=2
+  [FAIL] BitLocker on system drive  ->  ProtectionStatus=Off, VolumeStatus=FullyDecrypted (audit only)
+
+Security score: 58 / 100  (NEEDS WORK)
+
+===== AFTER =====
+
+-- Microsoft Security Baseline  (10 of 10 passing) --
+  [PASS] SMBv1 disabled  ->  EnableSMB1Protocol=False
+  [PASS] SMB server signing required  ->  RequireSecuritySignature=True
+  [PASS] NTLM hardened (LmCompatibilityLevel = 5)  ->  LmCompatibilityLevel=5
+  [PASS] User Account Control (UAC) enabled  ->  EnableLUA=1
+  [PASS] Minimum password length 14 or more  ->  Minimum password length=14
+  [PASS] Account lockout threshold 1 to 10  ->  Lockout threshold=10
+  [PASS] Firewall enabled on all profiles  ->  Domain=True, Private=True, Public=True
+  [PASS] Defender real-time protection on  ->  DisableRealtimeMonitoring=False
+  [PASS] Guest account disabled  ->  Guest Enabled=False
+  [PASS] RDP requires Network Level Authentication  ->  UserAuthentication=1
+
+-- Advanced hardening  (4 of 5 passing) --
+  [PASS] Defender PUA protection on  ->  PUAProtection=1
+  [PASS] ASR: block Office child processes  ->  ASR D4F940AB-401B-4EFC-AADC-AD5F3C50688A action=1
+  [PASS] PowerShell script block logging on  ->  EnableScriptBlockLogging=1
+  [PASS] LSA protection (RunAsPPL) on  ->  RunAsPPL=1
+  [FAIL] BitLocker on system drive  ->  ProtectionStatus=Off, VolumeStatus=FullyDecrypted (audit only)
+
+Security score: 96 / 100  (STRONG)
+
+===== Applying hardening =====
+  Created a System Restore Point (your undo button).
+  Remediated: NTLM hardened (LmCompatibilityLevel = 5)
+  Remediated: Minimum password length 14 or more
+  Remediated: Defender PUA protection on
+  Remediated: ASR: block Office child processes
+  Remediated: PowerShell script block logging on
+  Remediated: LSA protection (RunAsPPL) on   (reboot required to take effect)
+
